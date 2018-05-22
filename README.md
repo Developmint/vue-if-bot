@@ -90,8 +90,18 @@ VueIfBot detects bots by testing their user agent against the regex `/bot|google
 
 ```js
  <vue-if-bot>
-  <h1>This won't be visible for bots</h1>
-</vue-if-bot>
+   <h1>This will not be visible for bots</h1>
+ </vue-if-bot>
+
+ <vue-if-bot
+    :invert="true">
+    <h1>This will be visible for bots</h1>
+  </vue-if-bot>
+
+  <vue-if-bot
+     :regex="/some-custom-browser/">
+     <h1>This will be visible for users whose user agent contains some-custom-browser</h1>
+   </vue-if-bot>
 ```
 ## :gear: Contributing
 

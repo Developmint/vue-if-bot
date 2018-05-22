@@ -1,0 +1,103 @@
+{
+  "name": "vue-if-bot",
+  "version": "1.0.0",
+  "description": "Hide stuff from bots (especially cookie consents)",
+  "author": "Alexander Lichter <npm@lichter.io>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Developmint/vue-if-bot"
+  },
+  "bugs": {
+    "url": "https://github.com/Developmint/vue-if-bot/issues"
+  },
+  "scripts": {
+    "lint": "eslint lib test",
+    "test": "npm run lint && jest",
+    "release": "standard-version && git push --follow-tags && npm publish",
+    "commitlint": "commitlint -e $GIT_PARAMS",
+    "coverage": "codecov"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "vue",
+    "vuejs",
+    "bot",
+    "user-agent",
+    "useragent",
+    "hide",
+    "consent",
+    "cookie",
+    "component",
+    "plugin"
+  ],
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.0.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/lib/$1"
+    },
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/jest-serializer-vue"
+    ],
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^6.1.3",
+    "@commitlint/config-conventional": "^6.1.3",
+    "@vue/server-test-utils": "^1.0.0-beta.15",
+    "@vue/test-utils": "^1.0.0-beta.15",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.4",
+    "babel-loader": "^7.1.2",
+    "babel-preset-vue-app": "^2.0.0",
+    "cheerio": "^1.0.0-rc.2",
+    "codecov": "latest",
+    "cross-env": "^5.1.5",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^12.0.0-alpha.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "latest",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "husky": "^1.0.0-rc.2",
+    "jest": "latest",
+    "jest-serializer-vue": "^1.0.0",
+    "jsdom": "latest",
+    "standard-version": "latest",
+    "vue-jest": "^2.6.0",
+    "vue-loader": "^15.1.0",
+    "vue-router": "^3.0.1",
+    "vue-server-renderer": "^2.5.16",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.8.3",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "npm run commitlint"
+    }
+  },
+  "dependencies": {
+    "vue": "^2.5.16"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "presets": [
+    [
+      "vue-app",
+      {
+        "modules": false
+      }
+    ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "vue-app",
+          {
+            "targets": {
+              "node": 8
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

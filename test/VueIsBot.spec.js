@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import { renderToString } from '@vue/server-test-utils'
-import VueIfBot from '../lib'
+import VueIfBot from '../src'
 
 const slotContent = '<div>I am the content</div>'
 

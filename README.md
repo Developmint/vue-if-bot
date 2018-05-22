@@ -66,9 +66,16 @@ export default {
 
 ```
 
-### :link::x: Using a CDN
+### :link: Using a CDN
 
-Sorry! No CDN available for VueIfBot right now.
+[UNPKG](https://unpkg.com/vue-if-bot/dist/) | [jsDelivr](https://cdn.jsdelivr.net/npm/vue-if-bot/dist/) (available as window.ifBot)
+
+```js
+Vue.component('if-bot', window.ifBot)
+
+// Continue as you wish
+
+```
 
 ## :hammer_and_wrench: Usage
 

@@ -4,7 +4,6 @@
   "description": "Hide stuff from bots (especially cookie consents)",
   "author": "Alexander Lichter <npm@lichter.io>",
   "license": "MIT",
-  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Developmint/vue-if-bot"
@@ -12,15 +11,23 @@
   "bugs": {
     "url": "https://github.com/Developmint/vue-if-bot/issues"
   },
+  "main": "dist/vue-if-bot.cjs.js",
+  "module": "dist/vue-if-bot.es.js",
+  "cdn": "dist/vue-if-bot.min.js",
+  "unpkg": "dist/vue-if-bot.min.js",
+  "jsdelivr": "dist/vue-if-bot.min.js",
   "scripts": {
     "lint": "eslint lib test",
     "test": "npm run lint && jest",
+    "build": "bili --format cjs,es,umd,umd-min --moduleName ifBot --no-babel.babelrc",
     "release": "standard-version && git push --follow-tags && npm publish",
     "commitlint": "commitlint -e $GIT_PARAMS",
     "coverage": "codecov"
   },
+  "sideEffects": false,
   "files": [
-    "lib"
+    "src",
+    "dist"
   ],
   "keywords": [
     "vue",
@@ -68,6 +75,7 @@
     "babel-jest": "^22.4.4",
     "babel-loader": "^7.1.2",
     "babel-preset-vue-app": "^2.0.0",
+    "bili": "^3.1.2",
     "cheerio": "^1.0.0-rc.2",
     "codecov": "latest",
     "cross-env": "^5.1.5",
@@ -84,7 +92,7 @@
     "jsdom": "latest",
     "standard-version": "latest",
     "vue-jest": "^2.6.0",
-    "vue-loader": "^15.1.0",
+    "vue-loader": "^15.2.0",
     "vue-router": "^3.0.1",
     "vue-server-renderer": "^2.5.16",
     "vue-template-compiler": "^2.5.16",

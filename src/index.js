@@ -5,6 +5,6 @@ export default {
     const isBot = process.server ? true : navigator.userAgent && botRegex.test(navigator.userAgent)
     const shouldShow = invert ? isBot : !isBot
 
-    return shouldShow ? h('div', {}, children) : ''
+    return h('div', {}, shouldShow ? children : [h('div')])
   }
 }

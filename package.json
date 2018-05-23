@@ -20,7 +20,7 @@
     "lint": "eslint lib test",
     "test": "npm run lint && jest",
     "build": "bili --format cjs,es,umd,umd-min --moduleName ifBot --no-babel.babelrc",
-    "release": "standard-version && git push --follow-tags && npm publish",
+    "release": "npm run build && standard-version && git push --follow-tags && npm publish",
     "commitlint": "commitlint -e $GIT_PARAMS",
     "coverage": "codecov"
   },

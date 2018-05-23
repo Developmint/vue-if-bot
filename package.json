@@ -1,6 +1,6 @@
 {
   "name": "vue-if-bot",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Hide stuff from bots (especially cookie consents)",
   "author": "Alexander Lichter <npm@lichter.io>",
   "license": "MIT",

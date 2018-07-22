@@ -10,13 +10,13 @@ const mockUserAgent = userAgent => {
 
 const testCanSeeOrNot = (can, wrapper) => {
   expect(wrapper.isVueInstance()).toBe(true)
-  expect(wrapper.html()).toBe(`<div>${can ? slotContent : '<div></div>'}</div>`)
+  expect(wrapper.html()).toBe(`<div>${can ? slotContent : ''}</div>`)
 }
 
 const testCanSee = curry(w => testCanSeeOrNot(true, w))
 const testCanNotSee = curry(w => testCanSeeOrNot(false, w))
 
-const testSsr = html => { expect(html).toBe(`<div data-server-rendered="true"><div></div></div>`) }
+const testSsr = html => { expect(html).toBe(`<div data-server-rendered="true"></div>`) }
 
 describe('VueIfBot', () => {
   afterEach(() => { mockUserAgent('Normal user here') })

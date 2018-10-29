@@ -7,6 +7,7 @@
   <a href="https://www.npmjs.com/package/vue-if-bot"><img src="https://img.shields.io/npm/v/vue-if-bot.svg" alt="Version"></a>
   <a href="https://www.npmjs.com/package/vue-if-bot"><img src="https://img.shields.io/npm/l/vue-if-bot.svg" alt="License"></a>
   <a href="https://conventionalcommits.org"><img src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" alt="We use Conventional Commits"></a>
+  <a href="https://thanks.lichter.io/"><img src="https://img.shields.io/badge/thanks-%E2%99%A5-ff69b4.svg" alt="Thanks badge"></a>
 </p>
 
 > Lightweight component to hide/show content to clients based on the user agent

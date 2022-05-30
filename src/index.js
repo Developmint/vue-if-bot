@@ -6,7 +6,7 @@ export default {
       return dummyEl
     }
 
-    const botRegex = regex || /bot|googlebot|crawler|spider|robot|crawling/i
+    const botRegex = regex || /bot|googlebot|crawler|spider|robot|crawling|Chrome-Lighthouse/i
     const isBot = navigator.userAgent && botRegex.test(navigator.userAgent)
     const shouldShow = invert ? isBot : !isBot
 
